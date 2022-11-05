@@ -1,0 +1,19 @@
+// mixins are like javascript functions
+// they are reusable code
+// they can take arguments (parameters)
+// https://getbootstrap.com/docs/5.2/layout/breakpoints/
+
+@mixin set-bg-text($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+.slider {
+  padding: 1rem;
+
+  @include set-bg-text($brown, $text-color-light);
+
+  @include media-breakpoint-up(sm) {
+    @include set-bg-text($red, $text-color-light);
+  }
+}

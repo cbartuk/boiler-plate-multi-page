@@ -1,2 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,900;1,400&family=Satisfy&display=swap");
 @import "bootstrap";
-@import "base.scss";
+// custom styles
+@import "variables";
+@import "base";
+@import "landing/slider";

@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <main>
+      <!-- Component içine parametre gönderme -->
+      <!-- @require('../partials/header.html', {"title": "First Section", "logo": "logo2.svg"}) -->
+      @require('../partials/header.html')
+
+      <section class="container content d-none">
+        <h1 class="text-center my-5">Product List</h1>
+        <div class="row">
+          <div class="col-lg-9 order-2 order-lg-1">
+            @require('../partials/product-list.html')
+          </div>
+          <div class="col-lg-3 order-1 order-lg-2">
+            <div class="card mb-5 mt-lg-0">
+              <div class="card-header">Basket</div>
+              <div class="card-body">Sepetteki ürünler</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      @require('../partials/footer.html')
+    </main>
+  </body>
+</html>

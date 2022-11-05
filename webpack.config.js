@@ -3,6 +3,15 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+const sassLoader = {
+  loader: 'sass-loader',
+  options: {
+    sassOptions: {
+      quietDeps: true,
+    },
+  },
+};
+
 module.exports = {
   entry: "./src/index.js",
 
@@ -27,14 +36,14 @@ module.exports = {
       inject: "body",
       title: "Anasayfa",
       filename: "index.html", //output
-      template: "./src/views/home.html",  //input
+      template: "./src/views/home.html", //input
     }),
 
     new HtmlWebpackPlugin({
       inject: "body",
       title: "Hakkimizda",
       filename: "about.html", //output
-      template: "./src/views/about.html",  //input
+      template: "./src/views/about.html", //input
     }),
 
     // [].concat(
@@ -61,7 +70,7 @@ module.exports = {
             },
           },
           "css-loader",
-          "sass-loader",
+          sassLoader,
         ],
       },
       {
@@ -70,7 +79,7 @@ module.exports = {
       },
       // Images loader
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        test: /\.(png|svg|jpg|jpeg|gif|webp|avif)$/i,
         type: "asset/resource",
       },
     ],
