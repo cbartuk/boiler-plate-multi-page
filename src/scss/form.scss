@@ -1,0 +1,52 @@
+.cs-form {
+  h2 {
+    color: var(--color-pumpkin);
+
+    &:empty {
+      padding: 2rem;
+      background-color: var(--color-clouds);
+
+      &::before {
+        content: var(--empty-content);
+        color: var(--color-concrete);
+        font-size: var(--small-font-size);
+      }
+    }
+  }
+
+  input[type="number"] {
+    &:in-range {
+      border-color: var(--color-turquoise);
+    }
+
+    &:out-of-range {
+      border-color: var(--color-pumpkin);
+    }
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    &:valid {
+      border-color: var(--color-turquoise);
+    }
+
+    &:invalid {
+      border-color: var(--color-pumpkin);
+    }
+  }
+
+  input {
+    &:optional {
+      border-top: 3px solid var(--color-turquoise);
+    }
+
+    &:required {
+      border-bottom: 3px solid var(--color-turquoise);
+    }
+
+    &:read-only {
+      border-top: none;
+      background-color: var(--color-clouds);
+    }
+  }
+}

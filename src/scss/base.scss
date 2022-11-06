@@ -1,3 +1,54 @@
+// css native variables
+// prefix : ön ek
+// --ba-body-bg-color: #f5f5f5;
+
+:root {
+  --body-font-family-sans: "Poppins", sans-serif;
+  --body-font-family-serif: "Satisfy", cursive;
+  --body-font-size: 16px;
+  --body-bg-color: #f5f5f5;
+  --body-bg-color-2: #eee;
+  --body-text-color: #333;
+
+  --color-clouds: #ecf0f1;
+  --color-concrete: #95a5a6;
+  --color-asbestos: #7f8c8d;
+  --color-turquoise: #1abc9c;
+  --color-river: #3498db;
+  --color-amethyst: #9b59b6;
+  --color-pumpkin: #d35400;
+
+  --empty-content: "Bu alan boş";
+  --small-font-size: 0.8rem;
+}
+
 body {
-  font-family: $font-family-sans-serif;
+  // font-family: $font-family-sans-serif;
+  // font-size: $font-size-base;
+  font-family: var(--body-font-family-sans);
+  font-size: var(--body-font-size);
+  background-color: var(--body-bg-color, var(--body-bg-color-2, red));
+  color: var(--body-text-color);
+}
+
+:target {
+  thead {
+    th {
+      color: var(--color-pumpkin);
+      font-size: 2rem;
+    }
+  }
+}
+
+::selection {
+  background-color: var(--color-turquoise);
+  color: var(--color-clouds);
+}
+
+.big-first-letter::first-letter {
+  font-size: 2rem;
+}
+
+.first-line-red::first-line {
+  color: var(--color-pumpkin);
 }

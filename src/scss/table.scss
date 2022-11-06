@@ -1,0 +1,37 @@
+// :first-of-type seçilen etiketin ilk örneğini seçer
+// :last-of-type seçilen etiketin son örneğini seçer
+// :first-child seçilen etiketin ilk alt elemanını seçer
+// :last-child seçilen etiketin son alt elemanını seçer
+// :nth-child(2) seçilen etiketin ikinci alt elemanını seçer
+
+.cs-table {
+  width: calc(100% - 2rem);
+  margin: 0 auto;
+
+  tbody {
+    tr {
+      color: var(--color-clouds);
+
+      &:nth-child(odd) {
+        background-color: var(--color-concrete);
+      }
+
+      &:nth-child(even) {
+        background-color: var(--color-asbestos);
+      }
+
+      td {
+        padding: 0.5rem;
+        color: var(--color-amethyst);
+
+        &:first-of-type {
+          color: var(--color-turquoise);
+        }
+
+        &:last-of-type {
+          color: var(--color-river);
+        }
+      }
+    }
+  }
+}

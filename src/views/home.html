@@ -15,8 +15,135 @@
     <main>
       <!-- reusable components -->
       @require('../partials/header.html')
-      @require('../partials/landing/slider.html')
-      @require('../partials/footer.html')
+
+      <div class="container my-5">
+        <p class="big-first-letter">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Consequuntur, atque officia!
+        </p>
+
+        <p class="first-line-red" style="width: 20rem">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis rerum
+          tempore fugiat ut nisi molestiae numquam! Cum nobis eos, illo eveniet
+          ipsa nostrum magnam tenetur voluptates cumque expedita fugiat facilis
+          nam hic eum. Delectus porro, consequatur laboriosam, praesentium vel
+          assumenda enim molestiae ipsum repellat vitae, voluptates officiis
+          consectetur soluta dignissimos?
+        </p>
+        <form action="#" class="cs-form">
+          <h2></h2>
+          <a href="#customTable" class="btn btn-primary">Go to table 1</a>
+          <a href="#customTable2" class="btn btn-primary">Go to table 2</a>
+
+          <input
+            type="number"
+            class="form-control my-2"
+            min="5"
+            max="8"
+            value="10"
+          />
+          <input
+            type="number"
+            class="form-control my-2"
+            min="5"
+            max="8"
+            value="7"
+          />
+
+          <input
+            type="text"
+            class="form-control my-2"
+            placeholder="Name"
+            required
+          />
+
+          <input
+            type="email"
+            class="form-control my-2"
+            placeholder="Email"
+            required
+          />
+
+          <input
+            type="text"
+            class="form-control my-2"
+            placeholder="readonly text"
+            readonly
+          />
+
+          <button type="submit" class="btn btn-primary my-2">Submit</button>
+        </form>
+      </div>
+
+      <div style="height: 50vh"></div>
+
+      <table class="cs-table" id="customTable">
+        <thead>
+          <tr>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>lorem</td>
+            <td>ipsum</td>
+            <td>dolor</td>
+          </tr>
+          <tr>
+            <td>Lorem, ipsum.</td>
+            <td>Quia, cumque.</td>
+            <td>Delectus, necessitatibus.</td>
+          </tr>
+          <tr>
+            <td>Lorem, ipsum.</td>
+            <td>Aspernatur, officia!</td>
+            <td>Reprehenderit, sunt?</td>
+          </tr>
+          <tr>
+            <td>Lorem, ipsum.</td>
+            <td>Fuga, voluptates.</td>
+            <td>Eius, eligendi.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="height: 30vh"></div>
+
+      <table class="cs-table" id="customTable2">
+        <thead>
+          <tr>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>lorem</td>
+            <td>ipsum</td>
+            <td>dolor</td>
+          </tr>
+          <tr>
+            <td>Lorem, ipsum.</td>
+            <td>Quia, cumque.</td>
+            <td>Delectus, necessitatibus.</td>
+          </tr>
+          <tr>
+            <td>Lorem, ipsum.</td>
+            <td>Aspernatur, officia!</td>
+            <td>Reprehenderit, sunt?</td>
+          </tr>
+          <tr>
+            <td>Lorem, ipsum.</td>
+            <td>Fuga, voluptates.</td>
+            <td>Eius, eligendi.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="height: 100vh"></div>
     </main>
   </body>
 </html>
